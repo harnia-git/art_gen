@@ -15,7 +15,11 @@ var sight;
 
 var mouse;
 var mouse_pressed_twice = false;
+var img; // 画像オブジェクト
 
+function preload() {
+	img = loadImage("/static/lenna.jpg"); // 画像のパスを指定して読み込む
+  }
 function setup() {
 
 	mouse = createVector();
@@ -34,7 +38,7 @@ function setup() {
 	redraw_button = createButton('Redraw').parent('redrawButton');
 	redraw_button.mousePressed(changeMessage);
 
-
+	
 	createCanvas(w, h).parent('canvasHolder');
 	pixelDensity(1);
 
@@ -50,15 +54,14 @@ function setup() {
 	valid_pixels = compute_valid_pixels(msg_graphics);
 
 	circles = create_circles(valid_pixels);
-
-
-
-
+	
 }
 
 function draw() {
 
-	background(51);
+	// background(51);
+	background(img);
+
 	mouse.x = mouseX;
 	mouse.y = mouseY;
 	for (var i = 0; i < circles.length; i++) {

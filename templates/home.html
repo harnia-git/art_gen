@@ -3,8 +3,8 @@
 
 {% block head %}
 {{ super() }}
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 <script src={{ url_for('send_static', path='sketch.js') }}></script>
 <script src={{ url_for('send_static', path='circle.js') }}></script>
@@ -15,7 +15,7 @@
   <h1 class="text-center"> Steering behaviour </h1>
   <p class="text-justify">
     <small>
-      genart web app for test
+      test sample
     </small>
   </p>
 
@@ -91,6 +91,8 @@
       <div class="
         col-xs-6">
         <div id="canvasHolder" align="center">
+          <img src="data:image/jpeg;base64,{{ img_data }}" id="lenna" style="display: none;">
+          <canvas id="canvas"></canvas>
         </div>
       </div>
     </div>
@@ -98,3 +100,5 @@
 
 
 </div>
+
+{% endblock content %}
