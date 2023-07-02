@@ -1,39 +1,11 @@
-Skip to content
-Product
-Solutions
-Open Source
-Pricing
-Search
-Sign in
-Sign up
-swaroopkml96
-/
-steering-text
-Public
-Code
-Issues
-Pull requests
-4
-Actions
-Projects
-Security
-Insights
-steering-text/templates/home.html
-@swaroopkml96
-swaroopkml96 initial commit
-Latest commit 854296a on Jan 3, 2019
- History
- 1 contributor
-106 lines (99 sloc)  2.54 KB
- 
-
 {% extends "bootstrap/base.html" %}
 {% block title %} Steering behaviour {% endblock title %}
 
 {% block head %}
 {{ super() }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 <script src={{ url_for('send_static', path='sketch.js') }}></script>
 <script src={{ url_for('send_static', path='circle.js') }}></script>
 {% endblock head %}
@@ -43,12 +15,7 @@ Latest commit 854296a on Jan 3, 2019
   <h1 class="text-center"> Steering behaviour </h1>
   <p class="text-justify">
     <small>
-      Steering behaviours is a beautiful class of techniques to computationally reproduce natural
-      bahaviours.
-      Each particle here is independent, and influenced only by its immediate surrounding,
-      fleeing the mouse and trying to get back home to the text. See
-      <a href="https://www.red3d.com/cwr/papers/1999/gdc99steer.pdf">this</a>
-      1999 paper by Craig Reynolds which introduced these techniques.
+      genart web app for test
     </small>
   </p>
 
@@ -131,20 +98,3 @@ Latest commit 854296a on Jan 3, 2019
 
 
 </div>
-
-{% endblock content %}
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-steering-text/templates/home.html at master · swaroopkml96/steering-text · GitHub
